@@ -1,0 +1,8 @@
+# Run any commands necessary to start application locally such as:
+# db migration scripts, app initialization, etc.
+#!/bin/sh
+
+cd /app
+export MAVEN_OPTS=-Xmx1024m
+
+nodemon --delay 80ms -e java --watch ./src --exec 'mvn spring-boot:run'

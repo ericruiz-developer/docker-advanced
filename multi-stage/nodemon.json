@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "watch": [
+        "/src"
+    ],
+    "execMap": {
+        "jar": "java"
+    }
+}

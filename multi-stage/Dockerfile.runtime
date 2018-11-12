@@ -1,0 +1,25 @@
+#Use Maven image for build and create alias
+FROM maven:3.5-jdk-8-alpine as build
+
+#Set working directory for subsequent commands
+WORKDIR /app
+
+#Copy our project source into image workspace
+COPY . .
+
+#Build and compile deployable artifact
+#Provide generic artifact name
+RUN mvn clean install \
+    && cp target/*.jar target/app.jar
+
+#Use smaller jre image for runtime
+FROM openjdk:8-jre-alpine
+
+WORKDIR /app
+
+#Copy artifact from previous stage
+#Note we reference the alias create in the previous stage
+COPY --from=build /app/target/app.jar target/app.jar
+
+ENV JAVA_OPTS=""
+CMD [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar -Dspring.profiles.active=local target/app.jar"]
