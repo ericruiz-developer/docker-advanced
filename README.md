@@ -13,6 +13,8 @@ There are many commands available and a full list can always been seen by runnin
 
 You'll find a reoccuring theme with `ls`, `inspect`, `rm`, `prune` which can be used in conjunction with many of Dockers objects. Here are some examples with resources we'll be learning about today.  
 
+*__Note:__ throughout this training we will periodically stray off topic to discuss general docker maintenance, to keep your local filesystem clean and reduce over consumption of drive space.*
+
 #### Images
 - `docker image <ls|inspect|rm|prune>`
 - `docker images` (list all images)
@@ -27,6 +29,9 @@ You'll find a reoccuring theme with `ls`, `inspect`, `rm`, `prune` which can be 
 
 #### Volumes
 - `docker volume <ls|inspect|rm|prune>`
+
+#### System
+- `docker system prune`  (Removes all unused containers, networks, dangling images, and build cache)
 
 ## Single Stage
 A simple implementation of a Node.js API. There are some useful things to note here though. We're doing some interesting volume mappings, notice there are 2 different startup commands (1 in the Dockerfile, 1 in the docker-compose.yaml) what does this mean? We're using `build: .` in the docker-compose.yaml, how does Docker interpret this?
