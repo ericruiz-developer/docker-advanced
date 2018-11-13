@@ -1,4 +1,4 @@
-# Docker plus
+# Advanced Docker
 
 Course outline
 - Single Stage vs Multi-stage
