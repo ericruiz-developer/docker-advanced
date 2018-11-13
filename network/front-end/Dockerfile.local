@@ -1,0 +1,14 @@
+FROM node:8-alpine
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
+
+## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
+RUN npm install
+
+COPY . .
+
+CMD ["npm run start"]
