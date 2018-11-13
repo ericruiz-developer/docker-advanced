@@ -1,5 +1,4 @@
-#Use Maven image for build and create alias
-FROM maven:3.5-jdk-8-alpine as build
+FROM maven:3.5-jdk-8-alpine
 
 #Set working directory for subsequent commands
 WORKDIR /app

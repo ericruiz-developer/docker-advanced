@@ -18,10 +18,7 @@ services:
     ports:
       - 8080:8080
     command: nodemon -e java --watch src --exec 'mvn spring-boot:run || touch src/'
-    # networks:
-    #   - springbootapp
-    # depends_on:
-    #   - db
+# Example DB Service
 #   db:
 #     image: postgres:10
 #     container_name: db
@@ -36,9 +33,11 @@ services:
 #     networks:
 #       - springbootapp
 
+# Example use of networks
 # networks:
 #   springbootapp:
 #     name: springbootapp_network
 
+# For you Windows people =(
 # volumes:
 #   db_data:
