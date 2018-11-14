@@ -2,7 +2,7 @@
 
 The focus here is to understand the common types of networks you can create in Docker. How and when to use them, along with how they relate to Docker Compose.
 
-Expect to be familiar with:
+Expect to become familiar with:
 * Bridge network
 * Host network
 * Network in Docker Compose

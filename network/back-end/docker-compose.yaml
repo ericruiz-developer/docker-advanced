@@ -9,8 +9,8 @@ services:
       - .:/app
       - /app/node_modules
     command: npm run dev
-    # networks:
-    #   - app
-# networks:
-#   app:
-#     name: myapp_network
+    networks:
+      - app
+networks:
+  app:
+    name: myapp_network
