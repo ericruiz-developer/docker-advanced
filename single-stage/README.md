@@ -5,6 +5,9 @@ Let's take a quick look at a Node.js API. Nothing fancy here but there are a few
 Try it out
 --
 
+Let's talk about it
+--
+
 1. Open the Dockerfile, we've chosen to do some interesting things here, like copying only the package.json file over. Why is that?
 
 2. Open up the docker-compose.yaml, lets walk through this.

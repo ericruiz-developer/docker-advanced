@@ -34,7 +34,6 @@ You'll see a pattern when interacting with Docker objects, you'll use `ls` | `rm
 - push  -- Push an image or a repository to a registry
 - rm    -- Remove one or more containers
 - rmi   -- Remove one or more images
-- run   -- Run a command in a new container
 - stop  -- Stop one or more running containers
 
 #### Objects
@@ -75,9 +74,9 @@ Inspect containers
 Occasionally, it's good to clean up old images, volumes, networks, etc. to avoid cluttering up your local system too much. There are several approaches to doing so but `prune` is most commonly used. Let's look at some manual ways and then will go full nuclear.
 
 Images
-1. `docker image prune` -- this simply remove dangling images.
-2. `docker image rm <image-id>` -- only a single image.
-3. `docker rmi $(docker images -aq)` -- Remove all images (not in use)
+1. `docker image rm <image-id>` -- only a single image.
+2. `docker rmi $(docker images -aq)` -- Remove all images (not in use)
+3. `docker image prune` -- this simply remove dangling images.
 
 Containers
 1. `docker container prune` -- removes stopped containers
