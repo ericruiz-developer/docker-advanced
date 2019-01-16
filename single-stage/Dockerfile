@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:alpine
 
 #Set directory for subsequent commands
 WORKDIR /app

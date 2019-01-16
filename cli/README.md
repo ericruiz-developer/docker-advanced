@@ -59,7 +59,7 @@ Note: If you have the same image with multiple tags then specifying `<name>:<tag
 
 Start a container.  
 1. `docker run hello-world`
-2. `docker run node`
+2. `docker run node:alpine tail -f /dev/null`
 
 View containers
 1. `docker ps -a` or `docker container ls -a`
