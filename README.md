@@ -1,6 +1,7 @@
 # Advanced Docker
 
 Course outline
+- Docker CLI
 - Single Stage vs Multi-stage
 - Docker compose, a closer look
 - Volumes, what where and why
