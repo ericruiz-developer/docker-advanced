@@ -6,7 +6,7 @@ WORKDIR /app
 #Copy package.json separately to
 #avoid unnecessary reruns of npm install
 #(see Docker layer caching)
-COPY [ "package.json", "package-lock.json", "./" ]
+COPY package.json .
 
 RUN npm cache clean --force \
     && npm install
