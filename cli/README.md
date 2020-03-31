@@ -25,6 +25,12 @@ Try it out
 
 You'll see a pattern when interacting with Docker objects, you'll use `ls` | `rm` | `inspect` | `prune` plenty. Let's take some time to explore objects and the commands used to interact with them.
 
+#### Objects
+- container
+- image
+- network
+- volume
+
 #### Common Commands
 - build -- Build an image from a Dockerfile
 - cp    -- Copy files/folders between a container and the local filesystem
@@ -36,11 +42,9 @@ You'll see a pattern when interacting with Docker objects, you'll use `ls` | `rm
 - rmi   -- Remove one or more images
 - stop  -- Stop one or more running containers
 
-#### Objects
-- container
-- image
-- network
-- volume
+#### CLI Pattern
+
+`docker <object> <command>`
 
 #### Working with Images
 
