@@ -2,9 +2,6 @@
 
 Let's take a quick look at a Node.js API. Nothing fancy here but there are a few points of interest.
 
-Try it out
---
-
 Let's talk about it
 --
 
@@ -20,3 +17,13 @@ Let's talk about it
 
 6. Run it  
 `docker-compose up --build`
+
+
+Try it out
+--
+
+Run project:  
+`docker-compose up`
+
+Build image (not required for docker-compose up):  
+`docker build -t mynodeapp:latest .`
