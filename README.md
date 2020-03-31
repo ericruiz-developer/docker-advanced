@@ -1,11 +1,11 @@
 # Advanced Docker
 
 Course outline
+- Introduction
 - Docker CLI
 - Single Stage vs Multi-stage
 - Docker compose, a closer look
 - Volumes, what where and why
-- Troubleshooting, debugging
 
 ## Cheat sheet
 
