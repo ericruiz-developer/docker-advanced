@@ -1,12 +1,15 @@
 ### Introduction
 
-####What is Docker?  
+#### What is Docker?  
 
 Wikipedia defines Docker as
 
 ````
 an open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.
 ````
+
+### Let's take a step back
+---
 
 #### What are containers?  
 The industry standard today is to use Virtual Machines (VMs) to run software applications. VMs run applications inside a guest Operating System, which runs on virtual hardware powered by the server’s host OS.
@@ -25,4 +28,26 @@ At the end of the day, containers are simply processes running on the host. They
 
 
 #### Virtual Machines vs. Containers Visualized
-![](../images/vm-vs-container.png)
+<img src="../images/vm-vs-container.png" width="800">
+
+
+### Docker Terminology
+---
+
+#### Images
+The blueprints of our application which form the basis of containers. In the demo above, we used the docker pull command to download the busybox image.
+
+#### Containers
+Created from Docker images and run the actual application. We create a container using docker run which we did using the busybox image that we downloaded. A list of running containers can be seen using the docker ps command.
+
+#### Docker Daemon
+The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system which clients talk to.
+
+#### Docker Client
+The command line tool that allows the user to interact with the daemon. More generally, there can be other forms of clients too - such as Kitematic which provide a GUI to the users.
+
+#### Container Registry
+Same concept as Github for code but used to store Images that are created by both official companies and everyday developers like yourself. Anyone can pull/push just like you can code on Github.
+
+#### Docker Hub
+A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
